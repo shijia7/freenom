@@ -208,7 +208,7 @@ class FreeNom
 
         if ($notRenewed || $renewed) {
             Mail::send(
-                '主人，我刚刚帮你续期域名啦~',
+                '【github action】主人，我刚刚帮你续期域名啦~',
                 [
                     $this->username,
                     $renewed ? sprintf('续期成功：%s<br>', $renewed) : '',
@@ -226,7 +226,7 @@ class FreeNom
         } else {
             if (config('notice_freq') == 1) {
                 Mail::send(
-                    '报告，今天没有域名需要续期',
+                    '【github action主人】报告，今天没有域名需要续期',
                     [
                         $this->username,
                         $domainInfo
